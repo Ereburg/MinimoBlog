@@ -1,0 +1,13 @@
+.DS_Store
+.idea
+*.ai
+*.psd
+*.pdf
+*.log
+npm-debug.*
+node_modules/
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+build/

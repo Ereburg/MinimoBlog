@@ -1,0 +1,44 @@
+{
+  "name": "minimo",
+  "version": "1.0.0",
+  "description": "Minimo is a Blog website template that I decided to code. This version is build with Gulp 4.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ereburg/MinimoBlog.git"
+  },
+  "keywords": [
+    "Minimo",
+    "Blog"
+  ],
+  "author": "Eugene Kotsarev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ereburg/MinimoBlog/issues"
+  },
+  "homepage": "https://github.com/Ereburg/MinimoBlog#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tinypng-compress": "^1.2.5"
+  },
+  "browserslist": [
+    "last 15 version",
+    "> 1%",
+    "IE 10",
+    "IE 9",
+    "IE 8",
+    "IE 7"
+  ]
+}
