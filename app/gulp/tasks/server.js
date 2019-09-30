@@ -1,5 +1,5 @@
 module.exports = function () {
-    $.gulp.task('server', function () {
+    $.gulp.task('server', () => {
         $.bs.init({
             server: {
                 baseDir: "./app/build"

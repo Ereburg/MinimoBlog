@@ -1,5 +1,5 @@
 module.exports = function () {
-    $.gulp.task('styles', function () {
+    $.gulp.task('styles', () => {
         return $.gulp.src('./app/source/sass/style.sass')
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({
