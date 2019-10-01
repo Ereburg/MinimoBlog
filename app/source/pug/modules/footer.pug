@@ -1,0 +1,14 @@
+- var footerLinks = [{link: "#", name: 'Terms and conditions'}, {link: "#", name: 'Privacy'}] 
+- var footerSocials = [{link: "#", name: 'Facebook'}, {link: "#", name: 'Twitter'}, {link: "#", name: 'Instagram'}] 
+
+footer.footer
+    nav.footer__nav
+        ul.footer__menu
+            for i in footerLinks
+                li.footer__menu-item
+                    a(href=i.link).footer__link=i.name
+        ul.footer__socials.socials
+            li.socials__item
+            for i in footerSocials
+                li.socials__item
+                    a(href=i.link).socials__link=i.name

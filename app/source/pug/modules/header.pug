@@ -1,0 +1,16 @@
+mixin navLink(link, name, current)
+    li.nav__link
+        if(current)
+            a(href=link).nav__link.nav__link--current=name
+        else
+            a(href=link).nav__link=name
+
+header.header
+    nav.header__nav.nav
+        h1.page__main-title
+            a(href='#').brand-name minimø
+        ul.nav__menu
+            +navLink('lifestyle.html', 'lifestyle', pageLifestyle)
+            +navLink('photodiary.html', 'photodiary', pagePhotodiary)
+            +navLink('music.html', 'music', pageMusic)
+            +navLink('travel.html', 'travel', pageTravel)
