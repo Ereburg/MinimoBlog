@@ -1,0 +1,31 @@
+.header
+    position: fixed
+    top: 0
+    width: 100%
+    padding-top: 70px
+    padding-bottom: 15px
+    background-color: #fff
+    
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.nav__menu
+    display: flex
+    list-style-type: none
+
+.nav__menu-item
+    margin: 0 45px
+    &:first-child
+        margin-left: 0
+    &:last-child
+        margin-right: 0
+    
+.nav__link
+    font-size: 14px
+    line-height: 24px
+    text-transform: uppercase
+    &--current 
+        color: red
+        text-transform: uppercase

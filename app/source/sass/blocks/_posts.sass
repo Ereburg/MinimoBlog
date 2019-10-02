@@ -1,0 +1,26 @@
+.posts
+    margin-top: 110px
+    margin-bottom: 100px
+
+.posts__grid
+    display: grid
+    grid-template-columns: repeat(2, minmax(320px, 1fr))
+    grid-template-rows: auto
+    column-gap: 60px
+    row-gap: 125px
+    margin-bottom: 100px
+
+.posts__article
+    max-width: 420px
+    width: 100%
+
+.intro__posts-image
+    margin-bottom: 20px
+
+.posts__title
+    margin-top: 15px
+    margin-bottom: 25px
+    @include fontStyle($size: 30px, $lineHeight: 1.5)
+
+.posts__paragraph
+    @include fontStyle()

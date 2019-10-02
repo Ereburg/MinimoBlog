@@ -1,13 +1,25 @@
+h1,
+.brand-name
+  @include fontStyle('Inconsolata', 30px, normal, 1, uppercase, $nav-color)
+  text-decoration: none
+  @include tracking(200)
 
-h1
-  font-family: 'Inconsolata'
-  // font-family: 'Playfair Display'
-  // font-family: 'Ubuntu'
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+textarea,
+input,
+label
+  font-family: 'Playfair Display'
   font-weight: normal
-  text-transform: uppercase
+  color: $text-color
+  text-decoration: none
 
-
-h2 
-
-
-p 
+.posts-anchor
+  display: block
+  @include fontStyle('Ubuntu', 14px, 300, 24px, uppercase, $anchor-color)
+  cursor: pointer

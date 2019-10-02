@@ -1,0 +1,30 @@
+@mixin fontStyle($family: 'Playfair Display', $size: 14px, $weight: normal, $lineHeight: 24px, $textTransform: none, $color: $text-color)
+    font-family: $family
+    font-size: $size
+    font-weight:  $weight
+    line-height: $lineHeight
+    text-transform: $textTransform
+    color: $color
+
+@mixin linx ($link, $visit, $hover, $active)
+    a 
+        color: $link
+        &:visited 
+            color: $visit
+        &:hover 
+            color: $hover
+        &:active 
+            color: $active
+
+// Convert illustrator, indesign and photoshop tracking into letter spacing.
+
+@function tracking( $target )
+  @return ($target / 1000) * 1em
+
+@mixin tracking( $target )
+  letter-spacing: tracking( $target )
+
+// margin
+
+@mixin elMargin($marg...)
+    margin: $marg

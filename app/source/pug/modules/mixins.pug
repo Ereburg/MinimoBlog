@@ -1,0 +1,20 @@
+mixin navLink(link, name, current)
+    li.nav__menu-item
+        if(current)
+            a(href=link).nav__link.nav__link--current=name
+        else
+            a(href=link).nav__link=name
+
+
+mixin postsArticle(src= '', href= '#', anchorTag= 'lifestyle', title= 'More than just a music festival', postsText)
+    article.posts__article
+        if block
+            block
+        else 
+            picture.posts__picture-wrapper
+                source(media="(min-width: )", srcset="", type="image/")
+                source(media="(min-width: )", srcset="", type="image/")
+                img(src= src, alt="", sizes="", srcset="").posts__main-image
+        a(href=href, target="_blank", rel="noopener noreferrer").posts-anchor= anchorTag
+        h3.posts__title= title
+        p.posts__paragraph= postsText
