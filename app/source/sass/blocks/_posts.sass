@@ -14,7 +14,8 @@
     max-width: 420px
     width: 100%
 
-.intro__posts-image
+.posts__main-image
+    display: block
     margin-bottom: 20px
 
 .posts__title
@@ -24,3 +25,12 @@
 
 .posts__paragraph
     @include fontStyle()
+
+.posts__btn
+    display: block
+    margin: 0 auto
+    padding: 17px 33px
+    @include fontStyle($size: 20px)
+    border: 1px solid $text-color
+    background-color: #fff
+    cursor: pointer

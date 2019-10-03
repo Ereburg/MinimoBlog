@@ -26,31 +26,33 @@ block content
                     picture
                         source(media="(min-width: )", srcset="", type="image/png")
                         source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-1.png", alt="Posts image", sizes="", srcset="").intro__posts-image
+                        img(src="images/post-image-1.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
                 +postsArticle("images/post-image-2.png", '#', 'Lifestyle', 'Life tastes better with coffee', postsText)
                     picture
                         source(media="(min-width: )", srcset="", type="image/")
                         source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-2.png", alt="Posts image", sizes="", srcset="").intro__posts-image
+                        img(src="images/post-image-2.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
                 +postsArticle("images/post-image-3.png", '#', 'Lifestyle', 'American dream', postsText)
                     picture
                         source(media="(min-width: )", srcset="", type="image/")
                         source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-3.png", alt="Posts image", sizes="", srcset="").intro__posts-image
+                        img(src="images/post-image-3.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
                 +postsArticle("images/post-image-4.png", '#', 'Lifestyle', 'A day exploring the Alps', postsText)
                     picture
                         source(media="(min-width: )", srcset="", type="image/")
                         source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-4.png", alt="Posts image", sizes="", srcset="").intro__posts-image
+                        img(src="images/post-image-4.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
         section.subscribe.subscribe--bg-dark
             h2.subscribe__title Sign up for our newsletter!
             form.subscribe__form
                 input.subscribe__email#subscribeEmail(type="email", name="subscribe" placeholder="Enter a valid email address" required)
-                button(type="submit" aria-label="Submit your email")
+                button(type="submit" aria-label="Submit your email").subscribe__button
+                    svg.subscribe__icon
+                        use(xlink:href='images/sprite.svg#icon-arrow')
         
         section.posts.container
             .posts__grid.container--regular
@@ -58,13 +60,13 @@ block content
                     picture
                         source(media="(min-width: )", srcset="", type="image/")
                         source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-5.png", alt="Posts image", sizes="", srcset="").intro__posts-image
-                        
+                        img(src="images/post-image-5.png", alt="Posts image", sizes="", srcset="").posts__main-image
+
                 +postsArticle("images/post-image-6.png", '#', 'lifestyle','Cold winter days', postsText)
                     picture
                         source(media="(min-width: )", srcset="", type="image/")
                         source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-6.png", alt="Posts image", sizes="", srcset="").intro__posts-image
+                        img(src="images/post-image-6.png", alt="Posts image", sizes="", srcset="").posts__main-image
             button.posts__btn(type="button") Load more
 
 block scripts

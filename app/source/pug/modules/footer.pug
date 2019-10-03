@@ -1,5 +1,6 @@
+- var iconFacebook = '<svg class="icon"><use xlink:href="images/sprite.svg#icon-facebook"></use></svg>'
 - var footerLinks = [{link: "#", name: 'Terms and conditions'}, {link: "#", name: 'Privacy'}] 
-- var footerSocials = [{link: "#", name: 'Facebook'}, {link: "#", name: 'Twitter'}, {link: "#", name: 'Instagram'}] 
+- var footerSocials = [{link: "#", name: 'Facebook', icon: 'images/sprite.svg#icon-facebook'}, {link: "#", name: 'Twitter', icon: 'images/sprite.svg#icon-twitter'}, {link: "#", name: 'Instagram', icon: 'images/sprite.svg#icon-instagram'}] 
 
 footer.footer.footer--bg-dark
     nav.footer__nav.container
@@ -8,6 +9,9 @@ footer.footer.footer--bg-dark
                 li.footer-menu__item
                     a(href=i.link).footer-menu__link=i.name
         ul.footer__socials.socials
+            li.socials__item Follow
             for i in footerSocials
                 li.socials__item
-                    a(href=i.link).socials__link=i.name
+                    a(href=i.link aria-label=i.name).socials__link
+                        svg.socials__icon
+                            use(xlink:href=i.icon)

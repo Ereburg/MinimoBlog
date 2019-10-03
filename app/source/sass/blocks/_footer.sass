@@ -9,13 +9,19 @@
     display: flex
     list-style-type: none
     
-.footer-menu__item:not(:first-child) .footer-menu__link
-    margin-left: 10px 
+.footer-menu .footer-menu__item:not(:first-child)
+    margin-left: 15px 
     
 
-.socials__item:not(:last-child) .socials__link
-    margin-right: 10px
+.socials .socials__item:not(:last-child)
+    margin-right: 15px
 
+.socials__item,
 .footer-menu__link,
 .socials__link
+    @include fontStyle()
     color: $nav-color
+
+.socials__icon
+    max-width: 15px
+    max-height: 15px

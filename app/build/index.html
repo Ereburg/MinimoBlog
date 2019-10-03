@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -41,7 +41,7 @@
         <article class="posts__article">
           <picture>
             <source media="(min-width: )" srcset="" type="image/png"/>
-            <source media="(min-width: )" srcset="" type="image/"/><img class="intro__posts-image" src="images/post-image-1.png" alt="Posts image" sizes="" srcset=""/>
+            <source media="(min-width: )" srcset="" type="image/"/><img class="posts__main-image" src="images/post-image-1.png" alt="Posts image" sizes="" srcset=""/>
           </picture><a class="posts-anchor" href="#" target="_blank" rel="noopener noreferrer">Lifestyle</a>
           <h3 class="posts__title">More than just a music festival</h3>
           <p class="posts__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
@@ -49,7 +49,7 @@
         <article class="posts__article">
           <picture>
             <source media="(min-width: )" srcset="" type="image/"/>
-            <source media="(min-width: )" srcset="" type="image/"/><img class="intro__posts-image" src="images/post-image-2.png" alt="Posts image" sizes="" srcset=""/>
+            <source media="(min-width: )" srcset="" type="image/"/><img class="posts__main-image" src="images/post-image-2.png" alt="Posts image" sizes="" srcset=""/>
           </picture><a class="posts-anchor" href="#" target="_blank" rel="noopener noreferrer">Lifestyle</a>
           <h3 class="posts__title">Life tastes better with coffee</h3>
           <p class="posts__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
@@ -57,7 +57,7 @@
         <article class="posts__article">
           <picture>
             <source media="(min-width: )" srcset="" type="image/"/>
-            <source media="(min-width: )" srcset="" type="image/"/><img class="intro__posts-image" src="images/post-image-3.png" alt="Posts image" sizes="" srcset=""/>
+            <source media="(min-width: )" srcset="" type="image/"/><img class="posts__main-image" src="images/post-image-3.png" alt="Posts image" sizes="" srcset=""/>
           </picture><a class="posts-anchor" href="#" target="_blank" rel="noopener noreferrer">Lifestyle</a>
           <h3 class="posts__title">American dream</h3>
           <p class="posts__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
@@ -65,7 +65,7 @@
         <article class="posts__article">
           <picture>
             <source media="(min-width: )" srcset="" type="image/"/>
-            <source media="(min-width: )" srcset="" type="image/"/><img class="intro__posts-image" src="images/post-image-4.png" alt="Posts image" sizes="" srcset=""/>
+            <source media="(min-width: )" srcset="" type="image/"/><img class="posts__main-image" src="images/post-image-4.png" alt="Posts image" sizes="" srcset=""/>
           </picture><a class="posts-anchor" href="#" target="_blank" rel="noopener noreferrer">Lifestyle</a>
           <h3 class="posts__title">A day exploring the Alps</h3>
           <p class="posts__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
@@ -76,7 +76,11 @@
       <h2 class="subscribe__title">Sign up for our newsletter!</h2>
       <form class="subscribe__form">
         <input class="subscribe__email" id="subscribeEmail" type="email" name="subscribe" placeholder="Enter a valid email address" required="required"/>
-        <button type="submit" aria-label="Submit your email"></button>
+        <button class="subscribe__button" type="submit" aria-label="Submit your email">
+          <svg class="subscribe__icon">
+            <use xlink:href="images/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
       </form>
     </section>
     <section class="posts container">
@@ -84,7 +88,7 @@
         <article class="posts__article">
           <picture>
             <source media="(min-width: )" srcset="" type="image/"/>
-            <source media="(min-width: )" srcset="" type="image/"/><img class="intro__posts-image" src="images/post-image-5.png" alt="Posts image" sizes="" srcset=""/>
+            <source media="(min-width: )" srcset="" type="image/"/><img class="posts__main-image" src="images/post-image-5.png" alt="Posts image" sizes="" srcset=""/>
           </picture><a class="posts-anchor" href="#" target="_blank" rel="noopener noreferrer">lifestyle</a>
           <h3 class="posts__title">Top 10 song for running</h3>
           <p class="posts__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
@@ -92,7 +96,7 @@
         <article class="posts__article">
           <picture>
             <source media="(min-width: )" srcset="" type="image/"/>
-            <source media="(min-width: )" srcset="" type="image/"/><img class="intro__posts-image" src="images/post-image-6.png" alt="Posts image" sizes="" srcset=""/>
+            <source media="(min-width: )" srcset="" type="image/"/><img class="posts__main-image" src="images/post-image-6.png" alt="Posts image" sizes="" srcset=""/>
           </picture><a class="posts-anchor" href="#" target="_blank" rel="noopener noreferrer">lifestyle</a>
           <h3 class="posts__title">Cold winter days</h3>
           <p class="posts__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
@@ -108,9 +112,19 @@
         <li class="footer-menu__item"><a class="footer-menu__link" href="#">Privacy</a></li>
       </ul>
       <ul class="footer__socials socials">
-        <li class="socials__item"><a class="socials__link" href="#">Facebook</a></li>
-        <li class="socials__item"><a class="socials__link" href="#">Twitter</a></li>
-        <li class="socials__item"><a class="socials__link" href="#">Instagram</a></li>
+        <li class="socials__item">Follow</li>
+        <li class="socials__item"><a class="socials__link" href="#" aria-label="Facebook">
+            <svg class="socials__icon">
+              <use xlink:href="images/sprite.svg#icon-facebook"></use>
+            </svg></a></li>
+        <li class="socials__item"><a class="socials__link" href="#" aria-label="Twitter">
+            <svg class="socials__icon">
+              <use xlink:href="images/sprite.svg#icon-twitter"></use>
+            </svg></a></li>
+        <li class="socials__item"><a class="socials__link" href="#" aria-label="Instagram">
+            <svg class="socials__icon">
+              <use xlink:href="images/sprite.svg#icon-instagram"></use>
+            </svg></a></li>
       </ul>
     </nav>
   </footer>

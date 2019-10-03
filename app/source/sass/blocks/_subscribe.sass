@@ -6,5 +6,29 @@
     padding: 70px 15px
 
 .subscribe__title
+    margin-bottom: 90px
     @include fontStyle($size: 30px, $lineHeight: auto, $color: $subscribe-color)
     @include tracking(25)
+
+.subscribe__form
+    position: relative
+    max-width: 400px
+    width: 100%
+    border-bottom: 1px solid $subscribe-color
+
+.subscribe__email
+    padding: 5px 5px 10px
+    width: 100%
+    border: none
+    background-color: transparent 
+
+.subscribe__button
+    position: absolute 
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    cursor: pointer
+
+.subscribe__icon
+    width: 33px
+    height: 18px
