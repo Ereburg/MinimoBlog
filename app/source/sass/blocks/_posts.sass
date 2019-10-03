@@ -23,6 +23,12 @@
     margin-bottom: 25px
     @include fontStyle($size: 30px, $lineHeight: 1.5)
 
+.posts__link
+    cursor: pointer
+    &:hover,
+    &:focus
+        color: lighten($text-color, 25%)
+
 .posts__paragraph
     @include fontStyle()
 
@@ -31,6 +37,7 @@
     margin: 0 auto
     padding: 17px 33px
     @include fontStyle($size: 20px)
+    @include links($nav-color, $box-shadow: 0 5px 5px rgba(0, 0, 0, 0.21))
     border: 1px solid $text-color
     background-color: #fff
     cursor: pointer

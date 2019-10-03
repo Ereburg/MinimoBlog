@@ -6,16 +6,12 @@
     text-transform: $textTransform
     color: $color
 
-@mixin linx ($link, $visit, $hover, $active)
-    a
+@mixin links($link, $box-shadow: none)
+    &:hover,
+    &:active
         color: $link
-        &:visited
-            color: $visit
-        &:hover
-            color: $hover
-        &:active
-            color: $active
-
+        box-shadow: $box-shadow
+    transition: all .1s ease
 // Convert illustrator, indesign and photoshop tracking into letter spacing.
 
 @function tracking( $target )

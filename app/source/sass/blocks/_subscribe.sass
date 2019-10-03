@@ -14,13 +14,23 @@
     position: relative
     max-width: 400px
     width: 100%
-    border-bottom: 1px solid $subscribe-color
+    transition: all .1s ease
 
 .subscribe__email
     padding: 5px 5px 10px
     width: 100%
     border: none
+    border-bottom: 1px solid $subscribe-color
     background-color: transparent 
+    transition: all .5s ease
+    &:focus,
+    &:active
+        // background-color: #fbfbfb
+        outline: none
+        border-radius: 7px
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.21)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.21)
+        
 
 .subscribe__button
     position: absolute 
@@ -28,6 +38,8 @@
     right: 0
     transform: translateY(-50%)
     cursor: pointer
+    border: none
+    background: transparent
 
 .subscribe__icon
     width: 33px

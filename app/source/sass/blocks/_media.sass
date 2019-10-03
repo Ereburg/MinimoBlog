@@ -8,7 +8,22 @@
         justify-items: center
     .nav__menu-item
         margin: 0 25px
+    .burger
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &__item
+            width: 25px
+            height: 3px
+            background-color: $text-color
+        &__item:nth-child(2)
+            margin: 4px 0
+            
 
+@include for-size(tablet-portrait-up)
+    .burger
+        display: none
 
 @include for-size(phone-only)
     .nav__menu

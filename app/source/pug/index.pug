@@ -13,8 +13,9 @@ block content
                 source(media="(min-width: )", srcset="", type="image/")
                 img(src="images/intro-image.png", alt="", sizes="", srcset="").intro__main-image
             .intro__post-wrapper.container--regular
-                a(href="http://", target="_blank", rel="noopener noreferrer").posts-anchor photodiary
-                h3.intro__title The perfect weekend getaway
+                a(href="photodiary.html", target="_blank", rel="noopener noreferrer").posts-anchor photodiary
+                h3.intro__title
+                    a(href="post.html").intro__link The perfect weekend getaway
                 p.intro__paragraph #{paragraphText}
                     
                 a(href="").intro__comments Leave a comment
@@ -22,33 +23,37 @@ block content
         section.posts.container
             h2.visually-hidden Latest updates
             .posts__grid.container--regular
-                +postsArticle(src, '#', 'Lifestyle', 'More than just a music festival', postsText)
+                +postsArticle(src, 'lifestyle.html', 'Lifestyle', 'More than just a music festival', postsText)
                     picture
-                        source(media="(min-width: )", srcset="", type="image/png")
-                        source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-1.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                        a(href='posts.html').posts__link
+                            source(media="(min-width: )", srcset="", type="image/png")
+                            source(media="(min-width: )", srcset="", type="image/")
+                            img(src="images/post-image-1.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
-                +postsArticle("images/post-image-2.png", '#', 'Lifestyle', 'Life tastes better with coffee', postsText)
+                +postsArticle("images/post-image-2.png", 'lifestyle.html', 'Lifestyle', 'Life tastes better with coffee', postsText)
                     picture
-                        source(media="(min-width: )", srcset="", type="image/")
-                        source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-2.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                        a(href='posts.html').posts__link
+                            source(media="(min-width: )", srcset="", type="image/")
+                            source(media="(min-width: )", srcset="", type="image/")
+                            img(src="images/post-image-2.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
-                +postsArticle("images/post-image-3.png", '#', 'Lifestyle', 'American dream', postsText)
+                +postsArticle("images/post-image-3.png", 'photodiary.html', 'photodiary', 'American dream', postsText)
                     picture
-                        source(media="(min-width: )", srcset="", type="image/")
-                        source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-3.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                        a(href='posts.html').posts__link
+                            source(media="(min-width: )", srcset="", type="image/")
+                            source(media="(min-width: )", srcset="", type="image/")
+                            img(src="images/post-image-3.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
-                +postsArticle("images/post-image-4.png", '#', 'Lifestyle', 'A day exploring the Alps', postsText)
+                +postsArticle("images/post-image-4.png", 'photodiary.html', 'photodiary', 'A day exploring the Alps', postsText)
                     picture
-                        source(media="(min-width: )", srcset="", type="image/")
-                        source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-4.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                        a(href='posts.html').posts__link
+                            source(media="(min-width: )", srcset="", type="image/")
+                            source(media="(min-width: )", srcset="", type="image/")
+                            img(src="images/post-image-4.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
         section.subscribe.subscribe--bg-dark
             h2.subscribe__title Sign up for our newsletter!
-            form.subscribe__form
+            form(method="echo").subscribe__form
                 input.subscribe__email#subscribeEmail(type="email", name="subscribe" placeholder="Enter a valid email address" required)
                 button(type="submit" aria-label="Submit your email").subscribe__button
                     svg.subscribe__icon
@@ -56,17 +61,19 @@ block content
         
         section.posts.container
             .posts__grid.container--regular
-                +postsArticle("images/post-image-5.png", '#', 'lifestyle','Top 10 song for running', postsText)
+                +postsArticle("images/post-image-5.png", 'lifestyle.html', 'lifestyle','Top 10 song for running', postsText)
                     picture
-                        source(media="(min-width: )", srcset="", type="image/")
-                        source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-5.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                        a(href='posts.html').posts__link
+                            source(media="(min-width: )", srcset="", type="image/")
+                            source(media="(min-width: )", srcset="", type="image/")
+                            img(src="images/post-image-5.png", alt="Posts image", sizes="", srcset="").posts__main-image
 
-                +postsArticle("images/post-image-6.png", '#', 'lifestyle','Cold winter days', postsText)
+                +postsArticle("images/post-image-6.png", 'lifestyle.html', 'lifestyle','Cold winter days', postsText)
                     picture
-                        source(media="(min-width: )", srcset="", type="image/")
-                        source(media="(min-width: )", srcset="", type="image/")
-                        img(src="images/post-image-6.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                        a(href='posts.html').posts__link
+                            source(media="(min-width: )", srcset="", type="image/")
+                            source(media="(min-width: )", srcset="", type="image/")
+                            img(src="images/post-image-6.png", alt="Posts image", sizes="", srcset="").posts__main-image
             button.posts__btn(type="button") Load more
 
 block scripts

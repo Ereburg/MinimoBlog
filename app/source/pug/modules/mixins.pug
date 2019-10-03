@@ -6,15 +6,17 @@ mixin navLink(link, name, current)
             a(href=link).nav__link=name
 
 
-mixin postsArticle(src= '', href= '#', anchorTag= 'lifestyle', title= 'More than just a music festival', postsText)
+mixin postsArticle(src= '', href= '#', anchorTag= 'lifestyle', title= 'More than just a music festival', postsText, postsLink= 'posts.html')
     article.posts__article
         if block
             block
         else 
             picture.posts__picture-wrapper
-                source(media="(min-width: )", srcset="", type="image/")
-                source(media="(min-width: )", srcset="", type="image/")
-                img(src= src, alt="", sizes="", srcset="").posts__main-image
+                a(href=postsLink).posts__link
+                    source(media="(min-width: )", srcset="", type="image/")
+                    source(media="(min-width: )", srcset="", type="image/")
+                    img(src= src, alt="", sizes="", srcset="").posts__main-image
         a(href=href, target="_blank", rel="noopener noreferrer").posts-anchor= anchorTag
-        h3.posts__title= title
+        h3.posts__title
+            a(href=postsLink).posts__link= title
         p.posts__paragraph= postsText
