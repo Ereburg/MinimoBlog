@@ -6,74 +6,89 @@ block variables
 
 block content
     main.main
-        section.intro.container.container--big
+
+        section.intro.container
             h2.visually-hidden The rescent posts
             picture.intro__picture-wrapper
-                source(media="(min-width: )", srcset="", type="image/")
-                source(media="(min-width: )", srcset="", type="image/")
-                img(src="images/intro-image.png", alt="", sizes="", srcset="").intro__main-image
+                source(media="(min-width: 1200px)", srcset="images/webp/intro-image@2x.webp 2x", type="image/webp")
+                source(media="(max-width: 1199px)", srcset="images/webp/intro-image.webp", type="image/webp")
+                source(media="(min-width: 1200px)", srcset="images/@x2/intro-image@2x.jpg 2x", type="image/jpg")
+                source(media="(max-width: 1199px)", srcset="images/@x1/intro-image.jpg", type="image/jpg")
+                img(src="images/@x1/intro-image.jpg", alt="Intro image").intro__main-image
             .intro__post-wrapper.container--regular
                 a(href="photodiary.html", target="_blank", rel="noopener noreferrer").posts-anchor photodiary
-                h3.intro__title
+                h3.intro__title  
                     a(href="post.html").intro__link The perfect weekend getaway
-                p.intro__paragraph #{paragraphText}
-                    
+                p.intro__paragraph #{paragraphText}    
                 a(href="").intro__comments Leave a comment
         
         section.posts.container
             h2.visually-hidden Latest updates
             .posts__grid.container--regular
                 +postsArticle(src, 'lifestyle.html', 'Lifestyle', 'More than just a music festival', postsText)
-                    picture
-                        a(href='posts.html').posts__link
-                            source(media="(min-width: )", srcset="", type="image/png")
-                            source(media="(min-width: )", srcset="", type="image/")
-                            img(src="images/post-image-1.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                    a(href='posts.html').posts__link
+                        picture
+                            source(media="(min-width: 1200px)", srcset="images/webp/post-image-1@2x.webp 2x", type="image/webp")
+                            source(media="(max-width: 1199px)", srcset="images/webp/post-image-1.webp", type="image/webp")
+                            source(media="(min-width: 1200px)", srcset="images/@x2/post-image-1@2x.jpg 2x", type="image/jpg")
+                            source(media="(max-width: 1199px)", srcset="images/@x1/post-image-1.jpg", type="image/jpg")
+                            img(src="images/@x1/post-image-1.jpg", alt="Posts image").posts__main-image
 
                 +postsArticle("images/post-image-2.png", 'lifestyle.html', 'Lifestyle', 'Life tastes better with coffee', postsText)
-                    picture
-                        a(href='posts.html').posts__link
-                            source(media="(min-width: )", srcset="", type="image/")
-                            source(media="(min-width: )", srcset="", type="image/")
-                            img(src="images/post-image-2.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                    a(href='posts.html').posts__link
+                        picture
+                            source(media="(min-width: 1200px)", srcset="images/webp/post-image-2@2x.webp 2x", type="image/webp")
+                            source(media="(max-width: 1199px)", srcset="images/webp/post-image-2.webp", type="image/webp")
+                            source(media="(min-width: 1200px)", srcset="images/@x2/post-image-2@2x.jpg 2x", type="image/jpg")
+                            source(media="(max-width: 1199px)", srcset="images/@x1/post-image-2.jpg", type="image/jpg")
+                            img(src="images/@x1/post-image-2.jpg", alt="Posts image").posts__main-image
 
                 +postsArticle("images/post-image-3.png", 'photodiary.html', 'photodiary', 'American dream', postsText)
-                    picture
-                        a(href='posts.html').posts__link
-                            source(media="(min-width: )", srcset="", type="image/")
-                            source(media="(min-width: )", srcset="", type="image/")
-                            img(src="images/post-image-3.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                    a(href='posts.html').posts__link
+                        picture
+                            source(media="(min-width: 1200px)", srcset="images/webp/post-image-3@2x.webp 2x", type="image/webp")
+                            source(media="(max-width: 1199px)", srcset="images/webp/post-image-3.webp", type="image/webp")
+                            source(media="(min-width: 1200px)", srcset="images/@x2/post-image-3@2x.jpg 2x", type="image/jpg")
+                            source(media="(max-width: 1199px)", srcset="images/@x1/post-image-3.jpg", type="image/jpg")
+                            img(src="images/@x1/post-image-3.jpg", alt="Posts image").posts__main-image
 
                 +postsArticle("images/post-image-4.png", 'photodiary.html', 'photodiary', 'A day exploring the Alps', postsText)
-                    picture
-                        a(href='posts.html').posts__link
-                            source(media="(min-width: )", srcset="", type="image/")
-                            source(media="(min-width: )", srcset="", type="image/")
-                            img(src="images/post-image-4.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                    a(href='posts.html').posts__link
+                        picture
+                            source(media="(min-width: 1200px)", srcset="images/webp/post-image-4@2x.webp 2x", type="image/webp")
+                            source(media="(max-width: 1199px)", srcset="images/webp/post-image-4.webp", type="image/webp")
+                            source(media="(min-width: 1200px)", srcset="images/@x2/post-image-4@2x.jpg 2x", type="image/jpg")
+                            source(media="(max-width: 1199px)", srcset="images/@x1/post-image-4.jpg", type="image/jpg")
+                            img(src="images/@x1/post-image-4.jpg", alt="Posts image").posts__main-image
 
         section.subscribe.subscribe--bg-dark
             h2.subscribe__title Sign up for our newsletter!
-            form(method="echo").subscribe__form
+            form(method="POST").subscribe__form
                 input.subscribe__email#subscribeEmail(type="email", name="subscribe" placeholder="Enter a valid email address" required)
                 button(type="submit" aria-label="Submit your email").subscribe__button
                     svg.subscribe__icon
                         use(xlink:href='images/sprite.svg#icon-arrow')
         
         section.posts.container
+            h2.visually-hidden Latest updates
             .posts__grid.container--regular
                 +postsArticle("images/post-image-5.png", 'lifestyle.html', 'lifestyle','Top 10 song for running', postsText)
-                    picture
-                        a(href='posts.html').posts__link
-                            source(media="(min-width: )", srcset="", type="image/")
-                            source(media="(min-width: )", srcset="", type="image/")
-                            img(src="images/post-image-5.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                    a(href='posts.html').posts__link
+                        picture
+                            source(media="(min-width: 1200px)", srcset="images/webp/post-image-5@2x.webp 2x", type="image/webp")
+                            source(media="(max-width: 1199px)", srcset="images/webp/post-image-5.webp", type="image/webp")
+                            source(media="(min-width: 1200px)", srcset="images/@x2/post-image-5@2x.jpg 2x", type="image/jpg")
+                            source(media="(max-width: 1199px)", srcset="images/@x1/post-image-5.jpg", type="image/jpg")
+                            img(src="images/@x1/post-image-5.jpg", alt="Posts image").posts__main-image
 
                 +postsArticle("images/post-image-6.png", 'lifestyle.html', 'lifestyle','Cold winter days', postsText)
-                    picture
-                        a(href='posts.html').posts__link
-                            source(media="(min-width: )", srcset="", type="image/")
-                            source(media="(min-width: )", srcset="", type="image/")
-                            img(src="images/post-image-6.png", alt="Posts image", sizes="", srcset="").posts__main-image
+                    a(href='posts.html').posts__link
+                        picture
+                            source(media="(min-width: 1200px)", srcset="images/webp/post-image-6@2x.webp 2x", type="image/webp")
+                            source(media="(max-width: 1199px)", srcset="images/webp/post-image-6.webp", type="image/webp")
+                            source(media="(min-width: 1200px)", srcset="images/@x2/post-image-6@2x.jpg 2x", type="image/jpg")
+                            source(media="(max-width: 1199px)", srcset="images/@x1/post-image-6.jpg", type="image/jpg")
+                            img(src="images/@x1/post-image-6.jpg", alt="Posts image").posts__main-image
             button.posts__btn(type="button") Load more
 
 block scripts

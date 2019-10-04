@@ -1,13 +1,12 @@
 header.header
     nav.header__nav.nav.container
-        h1.nav__title
-            a(href='#').brand-name Minimø
+        h1.nav__title Minimø
         ul.nav__menu
             +navLink('lifestyle.html', 'lifestyle', pageLifestyle)
             +navLink('photodiary.html', 'photodiary', pagePhotodiary)
             +navLink('music.html', 'music', pageMusic)
             +navLink('travel.html', 'travel', pageTravel)
         button(type="button").nav__button.burger
-            span.burger__item
-            span.burger__item
-            span.burger__item
+            span.burger__item.burger__item--first
+            span.burger__item.burger__item--second
+            span.burger__item.burger__item--last
