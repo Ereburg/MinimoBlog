@@ -25,14 +25,12 @@
             background-color: $text-color
         &__item:nth-child(2)
             margin: 4px 0
-    .burger:hover .burger__item--first,
-    .burger:focus .burger__item--first
+
+    .burger__item--first
         animation: burger__item--first 0s forwards
-    .burger:hover .burger__item--last,
-    .burger:focus .burger__item--last
+    .burger__item--last
         animation: burger__item--last 0s forwards
-    .burger:hover .burger__item--second,
-    .burger:focus .burger__item--second
+    .burger__item--second
         animation: burger__item--second 0s forwards
 
 @include for-size(tablet-portrait-up)
@@ -42,10 +40,38 @@
 @include for-size(phone-only)
     .nav__menu
         display: none
+
+    .nav__menu.nav__menu--show
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%)
+        width: 100vw
+        height: 100vh
+        margin-top: 20px 
+        background: #ffffffde
+
+    .nav__menu-item
+        margin: 0 auto
+        padding-bottom: 20px
+        &:first-child
+            margin-left: auto
+        &:last-child
+            margin-right: auto
+
+    .nav__link
+        font-size: 28px
+        line-height: 48px
+        
     .footer__nav
         flex-direction: column
         justify-content: center
         align-items: center
+
     .footer__menu
         margin-bottom: 25px
 
