@@ -1,25 +1,15 @@
 global.$ = {
     gulp: require('gulp'),
-    gp: require('gulp-load-plugins')(),
-    bs: require('browser-sync').create(),
+    plugins: require('gulp-load-plugins')(), // плагин, позволяющий не прописывать каждый плагин как переменную
+    bs: require('browser-sync').create(), // онлайн-сервер
 
     path: {
-        tasks: require('./app/gulp/config/tasks.js')
+        tasks: require('./gulp/config/tasks.js') // путь к конфигу, где прописаны в котором собран массив из путей к задачам галпа
     }
 };
 
-$.path.tasks.forEach(function (taskPath) {
-    require(taskPath)();
+$.path.tasks.forEach((taskPath) => {
+    require(taskPath)(); // собираем задачи
 });
 
-
-$.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('server', 'styles', 'scripts-libs', 'scripts')
-    // gulp.parallel('watch', 'server')
-));
-
-
-// gulp.task('watch', function() {
-//     gulp.watch('./app/source/pug/**/*.pug', gulp.series('pug'));
-//     gulp.watch('./app/source/sass/**/*.sass', gulp.series('styles'));
-// });
+$.gulp.task('default', $.gulp.parallel('pug', 'styles', 'scripts', 'server')); // команда по умолчанию
