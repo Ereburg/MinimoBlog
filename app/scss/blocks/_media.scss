@@ -1,0 +1,153 @@
+@include for-size(tablet) {
+  .container--regular {
+    padding: 0;
+  }
+
+  .posts__grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 420px));
+    gap: 100px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .nav__menu-item {
+    margin: 0 25px;
+  }
+
+  .burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    transition: all 0.1s ease;
+
+    &__item {
+      width: 25px;
+      height: 3px;
+      background-color: $text-color;
+    }
+
+    &__item:nth-child(2) {
+      margin: 4px 0;
+    }
+  }
+
+  .burger__item--first {
+    animation: first 0s forwards;
+  }
+
+  .burger__item--last {
+    animation: last 0s forwards;
+  }
+
+  .burger__item--second {
+    animation: second 0s forwards;
+  }
+}
+
+@include for-size(tablet-portrait-up) {
+  .burger {
+    display: none;
+  }
+}
+
+@include for-size(phone-only) {
+  .nav__menu {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 60vh;
+    margin-top: 0;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav__menu.nav__menu--show {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    visibility: visible;
+
+    opacity: 1;
+  }
+
+  .nav__menu-item {
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+
+  .nav__link {
+    font-size: 28px;
+    line-height: 48px;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__menu {
+    margin-bottom: 25px;
+  }
+}
+
+@keyframes first {
+  10% {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: rotate(15deg) translate(5px, -5px);
+  }
+
+  100% {
+    position: absolute;
+    top: 50%;
+    right: 27.5%;
+    transform: rotate(45deg) translate(5px, -5px);
+  }
+}
+
+@keyframes last {
+  10% {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: rotate(-15deg) translate(-5px, -5px);
+  }
+
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 27.5%;
+    transform: rotate(-45deg) translate(-5px, -5px);
+  }
+}
+
+@keyframes second {
+  100% {
+    position: absolute;
+    visibility: hidden;
+  }
+}

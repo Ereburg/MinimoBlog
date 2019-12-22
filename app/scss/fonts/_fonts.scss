@@ -1,0 +1,48 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Inconsolata";
+  font-style: normal;
+  src: url("../fonts/inconsolata/Inconsolata-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Inconsolata";
+  font-style: normal;
+  src: url("../fonts/inconsolata/Inconsolata-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+//
+@font-face {
+  font-weight: normal;
+  font-family: "Playfair Display";
+  font-style: normal;
+  src: url("../fonts/playfair/playfair-display-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Playfair Display";
+  font-style: normal;
+  src: url("../fonts/playfair/playfair-display-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 900;
+  font-family: "Playfair Display";
+  font-style: normal;
+  src: url("../fonts/playfair/playfair-display-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+//
+@font-face {
+  font-weight: 300;
+  font-family: "Ubuntu";
+  font-style: normal;
+  src: url("../fonts/ubuntu/ubuntu-light.woff2") format("woff2");
+  font-display: swap;
+}

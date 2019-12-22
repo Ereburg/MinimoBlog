@@ -1,0 +1,75 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 15px;
+}
+
+.subscribe__title {
+  margin-bottom: 90px;
+
+  @include fontStyle($size: 30px, $lineHeight: auto, $color: $subscribe-color);
+  @include tracking(25);
+}
+
+.subscribe__form {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.1s ease;
+
+  // &::after {
+  //   content: '';
+  //   display: flex;
+  //   width: 100%;
+  //   height: 1px;
+  //   background: $subscribe-color;
+  // }
+
+  &:focus {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.subscribe__email {
+  width: 100%;
+  padding: 5px 10px 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+
+  &:focus,
+  &:active {
+    border-radius: 2px;
+    // background-color: #fbfbfb;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.45);
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.subscribe__button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    fill: $anchor-color;
+  }
+}
+
+.subscribe__icon {
+  width: 30px;
+  height: 18px;
+}

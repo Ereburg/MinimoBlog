@@ -1,0 +1,29 @@
+h1,
+.brand-name,
+.brand-link {
+  @include fontStyle("Inconsolata", 30px, normal, 1, uppercase, $nav-color);
+  @include tracking(200);
+  text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+textarea,
+input,
+label {
+  color: $text-color;
+  font-weight: normal;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+}
+
+.posts-anchor {
+  @include fontStyle("Ubuntu", 14px, 300, 24px, uppercase, $anchor-color);
+  @include links($nav-color);
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+
+.footer__menu,
+.footer__socials {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer-menu .footer-menu__item:not(:first-child) {
+  margin-left: 15px;
+}
+
+.socials .socials__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.socials__item,
+.footer-menu__link,
+.socials__link {
+  @include fontStyle();
+  @include links($text-color);
+  color: $nav-color;
+}
+
+.socials__item:first-child:hover {
+  color: $nav-color;
+}
+
+
+.socials__icon {
+  max-width: 15px;
+  max-height: 15px;
+}
