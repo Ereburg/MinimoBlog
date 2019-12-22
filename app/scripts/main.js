@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	// Меню
-	var navButton = document.querySelector('.nav__button');
-	var navMenu = document.querySelector('.nav__menu');
+	const navButton = document.querySelector('.nav__button');
+	const navMenu = document.querySelector('.nav__menu');
 	const burgerItrem = document.querySelectorAll('.burger__item');
 
 
