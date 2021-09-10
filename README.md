@@ -1,6 +1,6 @@
 # Minimo
-This is my first test website that was build with Gulp.
-It includes Pug, Sass/SCSS, JS compilers and image convertors.
+This is my first test website where I used Gulp for the first time. It includes Pug, Sass/SCSS, JS compilers and 
+image convertors.
 
 ## Links
 [Link to GitHub Pages.](https://ereburg.github.io/ProductName/)

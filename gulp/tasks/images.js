@@ -2,25 +2,25 @@ module.exports = function () {
   $.gulp.task("tiny", () => {
     return $.gulp.src("./app/images/responsive/**/*.{png,jpg,jpeg}")
       .pipe($.plugins.tinypngWeb({ verbose: true }))
-      .pipe($.gulp.dest("./build/images/"));
+      .pipe($.gulp.dest(`./${$.output}/images/`));
   });
 
   $.gulp.task("webp", () => {
-    return $.gulp.src("./build/images/**/*.{png,jpg,jpeg}")
+    return $.gulp.src("./app/images/**/*.{png,jpg,jpeg}")
       .pipe($.plugins.webp({ quality: 80 }))
-      .pipe($.gulp.dest("./build/images/"));
+      .pipe($.gulp.dest(`${$.output}/images/`));
   });
 
   $.gulp.task("sprite", () => {
     return $.gulp.src("./app/images/sprite/sp-*.svg")
       .pipe($.plugins.svgstore())
       .pipe($.plugins.rename("sprite.svg"))
-      .pipe($.gulp.dest("./build/images/"));
+      .pipe($.gulp.dest(`${$.output}/images/`));
   });
 
   $.gulp.task("svg:remove", () => {
     return $.gulp.src("./app/images/**/*.svg")
-      .pipe($.gulp.dest("./build/images/"));
+      .pipe($.gulp.dest(`${$.output}/images/`));
   });
   
   // Responsive Images
@@ -53,5 +53,5 @@ module.exports = function () {
 
   $.gulp.task('img:responsive', $.gulp.series('img-responsive-1x', 'img-responsive-2x'));
 
-  $.gulp.task('images', $.gulp.series('img-responsive-1x', 'img-responsive-2x', 'tiny', 'webp', 'sprite', 'svg:remove'));
+  $.gulp.task('images', $.gulp.series('img:responsive', 'img:compress', 'img:svg'));
 };
